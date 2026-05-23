@@ -1,0 +1,42 @@
+{
+  "name": "xiangmian-phase0",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "validate:knowledge": "vitest run tests/knowledge-base.test.ts",
+    "validate:vision": "vitest run tests/vision-phase2.test.ts",
+    "validate:mvp": "vitest run tests/mvp-phase3.test.ts",
+    "validate:phase4": "vitest run tests/phase4-safety.test.ts tests/phase4-docs.test.ts",
+    "validate:phase5": "vitest run tests/phase5-gray.test.ts tests/phase5-docs.test.ts",
+    "validate:phase6": "vitest run tests/phase6-launch.test.ts tests/phase6-docs.test.ts",
+    "validate:phase7": "vitest run tests/phase7-registry.test.ts tests/phase7-docs.test.ts",
+    "validate:phase8": "vitest run tests/phase8-admin.test.ts tests/phase8-docs.test.ts",
+    "validate:phase9": "vitest run tests/phase9-saas.test.ts tests/phase9-docs.test.ts",
+    "validate:phase10": "vitest run tests/phase10-pilot.test.ts tests/phase10-docs.test.ts",
+    "validate:phase11": "vitest run tests/phase11-commercial.test.ts tests/phase11-docs.test.ts",
+    "validate:phase12": "vitest run tests/phase12-expansion.test.ts tests/phase12-docs.test.ts",
+    "validate:phase13": "vitest run tests/phase13-scale.test.ts tests/phase13-docs.test.ts",
+    "validate:phase14": "vitest run tests/phase14-ops.test.ts tests/phase14-docs.test.ts",
+    "validate:phase15": "vitest run tests/phase15-expansion.test.ts tests/phase15-docs.test.ts"
+  },
+  "dependencies": {
+    "lucide-react": "^0.553.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.7",
+    "vitest": "^4.0.14"
+  }
+}

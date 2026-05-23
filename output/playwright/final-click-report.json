@@ -1,0 +1,722 @@
+{
+  "timestamp": "2026-05-04T10:08:52.579Z",
+  "url": "http://127.0.0.1:11194",
+  "title": "观相镜 Phase 15",
+  "results": [
+    {
+      "name": "entry_open_camera_experience",
+      "status": "passed",
+      "buttonIndex": 0,
+      "text": "开镜体验",
+      "disabled": false,
+      "before": "entry",
+      "after": "consent"
+    },
+    {
+      "name": "consent_checkbox_enables_camera_button",
+      "status": "passed",
+      "before": {
+        "active": "consent",
+        "checkbox": false,
+        "startDisabled": true,
+        "body": "PHASE 15 COMMERCIAL EXPANSION\n\n观相镜\n端侧处理\n摄像头只用于本次端侧互动\n\n浏览器会请求摄像头权限。人脸关键点和表情动作仅在你的设备上处理，不上传原始图像、视频或身份标识。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。摄像头仅用于本次端侧动作互动，不上传、不保存原始图像或视频。\n\n我已知晓这是传统文化娱乐互动，可随时改用手动抽卡。\n同意并开镜\n不开镜\nentry\nconsent\ncalibration\naction_task\nresult\nexit\n关镜\n手动抽卡\n结果页等待卡牌\n\n完成动作或手动抽卡后，这里会显示安全标题、出处、现代释义、行动建议和免责声明。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。请把结果当作一张国风互动卡牌和今日行动提醒。\n\n动作任务\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n视觉状态\n会话\nconsent\n摄像头\nidle\n模型\nidle\n质量\n未检测到人脸\nFPS\n0\n帧耗时\n0ms\n质量分\n0\nYaw\n0\n最近事件\n\n暂无动作事件。\n\n多主题活动\n前程镜\n山河镜\n\n本体验默认不上传原始图片、视频或人脸模板；你可以不开摄像头直接手动抽卡。\n\n隐私默认值\n摄像头帧：local_only\n原始图像上传：false\n身份识别：false\n埋点：anonymous_events_only\n灰度埋点草案\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。后续分享海报不得包含原始人脸图像，默认只展示卡牌与免责声明。\n\n暂无匿名事件。\n\n灰度批次\n批次\nGRAY-001\n版本\nphase5-gray"
+      },
+      "after": {
+        "checkbox": true,
+        "startDisabled": false
+      }
+    },
+    {
+      "name": "consent_no_camera_manual_draw",
+      "status": "passed",
+      "buttonIndex": 1,
+      "text": "不开镜",
+      "disabled": false,
+      "before": "consent",
+      "after": "result"
+    },
+    {
+      "name": "manual_draw_generates_result_card",
+      "status": "failed",
+      "observedActive": "result"
+    },
+    {
+      "name": "result_tone_classic",
+      "status": "failed",
+      "target": "古籍感",
+      "before": "result",
+      "after": "result",
+      "ok": false,
+      "reason": "not found"
+    },
+    {
+      "name": "result_tone_light",
+      "status": "failed",
+      "target": "轻松版",
+      "before": "result",
+      "after": "result",
+      "ok": false,
+      "reason": "not found"
+    },
+    {
+      "name": "result_tone_action",
+      "status": "passed",
+      "target": "行动建议",
+      "before": "result",
+      "after": "result",
+      "ok": true,
+      "index": 5,
+      "text": "行动建议"
+    },
+    {
+      "name": "result_redraw",
+      "status": "passed",
+      "target": "再抽一张",
+      "before": "result",
+      "after": "result",
+      "ok": true,
+      "index": 6,
+      "text": "再抽一张"
+    },
+    {
+      "name": "redraw_keeps_result_loop",
+      "status": "failed",
+      "observed": "result"
+    },
+    {
+      "name": "result_exit_clear",
+      "status": "passed",
+      "target": "退出清理",
+      "before": "result",
+      "after": "exit",
+      "ok": true,
+      "index": 7,
+      "text": "退出清理"
+    },
+    {
+      "name": "exit_clears_session",
+      "status": "passed",
+      "observed": "exit"
+    },
+    {
+      "name": "exit_restart",
+      "status": "passed",
+      "target": "重新开始",
+      "before": "exit",
+      "after": "entry",
+      "ok": true,
+      "index": 0,
+      "text": "重新开始"
+    },
+    {
+      "name": "campaign_switch_shanhe",
+      "status": "passed",
+      "target": "山河镜",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 20,
+      "text": "山河镜"
+    },
+    {
+      "name": "campaign_theme_is_shanhe",
+      "status": "passed",
+      "observed": "山河镜"
+    },
+    {
+      "name": "campaign_switch_qiancheng",
+      "status": "passed",
+      "target": "前程镜",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 19,
+      "text": "前程镜"
+    },
+    {
+      "name": "campaign_theme_is_qiancheng",
+      "status": "passed",
+      "observed": "前程镜"
+    },
+    {
+      "name": "gray_feedback_entry",
+      "status": "passed",
+      "target": "反馈入口",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 21,
+      "text": "反馈入口"
+    },
+    {
+      "name": "gray_feedback_copy_updates",
+      "status": "passed"
+    },
+    {
+      "name": "gray_issue_report",
+      "status": "passed",
+      "target": "问题上报",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 22,
+      "text": "问题上报"
+    },
+    {
+      "name": "gray_issue_copy_updates",
+      "status": "passed"
+    },
+    {
+      "name": "admin_role_product",
+      "status": "passed",
+      "target": "product",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 23,
+      "text": "product"
+    },
+    {
+      "name": "admin_role_content",
+      "status": "passed",
+      "target": "content",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 24,
+      "text": "content"
+    },
+    {
+      "name": "admin_role_compliance",
+      "status": "passed",
+      "target": "compliance",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 25,
+      "text": "compliance"
+    },
+    {
+      "name": "admin_role_legal",
+      "status": "passed",
+      "target": "legal",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 26,
+      "text": "legal"
+    },
+    {
+      "name": "admin_role_operations",
+      "status": "passed",
+      "target": "operations",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 27,
+      "text": "operations"
+    },
+    {
+      "name": "admin_role_engineering",
+      "status": "passed",
+      "target": "engineering",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 28,
+      "text": "engineering"
+    },
+    {
+      "name": "admin_role_viewer",
+      "status": "passed",
+      "target": "viewer",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 29,
+      "text": "viewer"
+    },
+    {
+      "name": "admin_viewer_disables_block",
+      "status": "passed",
+      "observed": true
+    },
+    {
+      "name": "admin_role_operations_restore",
+      "status": "passed",
+      "target": "operations",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 27,
+      "text": "operations"
+    },
+    {
+      "name": "admin_block_card",
+      "status": "passed",
+      "target": "Block card",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 30,
+      "text": "Block card"
+    },
+    {
+      "name": "admin_blocklist_increments_and_unblock_enabled",
+      "status": "passed",
+      "before": "0",
+      "after": "1",
+      "unblockEnabled": true
+    },
+    {
+      "name": "admin_unblock",
+      "status": "passed",
+      "target": "Unblock",
+      "before": "entry",
+      "after": "entry",
+      "ok": true,
+      "index": 31,
+      "text": "Unblock"
+    },
+    {
+      "name": "admin_unblock_resets_blocklist",
+      "status": "passed",
+      "observed": "0"
+    },
+    {
+      "name": "camera_integration_smoke_after_consent",
+      "status": "failed",
+      "observed": {
+        "camera": "active",
+        "model": "loading",
+        "quality": "未检测到人脸",
+        "body": "PHASE 15 COMMERCIAL EXPANSION\n\n观相镜\n端侧处理\n已进入兜底模式\n\n视觉模型暂时不可用，可以切换到手动抽卡继续体验。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。当前环境不适合开镜时，可继续使用手动抽卡。\n\n手动抽卡\n重试开镜\nentry\nconsent\ncalibration\naction_task\nresult\nexit\n关镜\n手动抽卡\n结果页等待卡牌\n\n完成动作或手动抽卡后，这里会显示安全标题、出处、现代释义、行动建议和免责声明。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。请把结果当作一张国风互动卡牌和今日行动提醒。\n\n动作任务\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n视觉状态\n会话\nfallback\n摄像头\nactive\n模型\nloading\n质量\n未检测到人脸\nFPS\n0\n帧耗时\n0ms\n质量分\n0\nYaw\n0\n最近事件\n\n暂无动作事件。\n\n多主题活动\n前程镜\n山河镜\n\n本体验默认不上传原始图片、视频或人脸模板；你可以不开摄像头直接手动抽卡。\n\n隐私默认值\n摄像头帧：local_only\n原始图像上传：false\n身份识别：false\n埋点：anonymous_events_only\n灰度埋点草案\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。后续分享海报不得包含原始人脸图像，默认只展示卡牌与免责声明。\n\ncamera_consent_granted\nlocal\n灰度批次\n批次\nGRAY-001\n版本\nphase5-gray-v0.1\n目标样本\n50\n候选卡牌\n315\nGo/No-Go\nhold\n覆盖面\n3\n反馈入口\n问题上报\n\n灰度数据只使用匿名事件和人工反馈表。\n\n灰度看板\n完成率\n75%\n手动完成\n100%\n动作成功\n75%\n结果到达\n75%\n分享意愿\n50%\n负面反馈\n0%\n发布活动\n活动\nCMP-001\n主题\n前程镜\n形态\nweb_h5\n状态\nready\n主题卡池\n180\n海报模板\nPOSTER-QIANCHENG-001\n\n毕业季/求职季传统文化互动卡牌，只提供目标拆解、表达沟通、节奏管理和复盘行动建议。\n\n发布看板\n活动数\n1\n可发布卡\n180\n海报\nready\n隐私\nready\n内容\nready\nGo/No-Go\ngo\nPhase 8 Admin v0.1\nproduct\ncontent\ncompliance\nlegal\noperations\nengineering\nviewer\nConfig\nCFG-001\nStatus\ndraft\nThemes\n2\nCampaigns\n2\nRelease gates\n4/4\nBlocklist\n0\nAudit logs\n1\nExport\n15981 bytes\nBlock card\nUnblock\nConfig store\nPrivacy pass: true\nGo/No-Go: go\nCompletion\n70%\nManual\n100%\nAction\n90%\nPoster\n35%\n\nPhase 15 中，商业扩展后台草稿不会直接影响公开 H5；只有 active tenant 的 commercial-approved published snapshot 会进入前台。\n\nPhase 9 SaaS v0.1\nTenant\n观相镜内部运营空间\nType\ninternal\nAccounts\n5\nPolicies\n7\nSnapshots\n2\nAudits\n4\nMigration\ntrue\nGo/No-Go\ngo\nPub"
+      }
+    },
+    {
+      "name": "mobile_smoke_initial_buttons_visible",
+      "status": "passed",
+      "observed": [
+        {
+          "i": 0,
+          "text": "开镜体验",
+          "disabled": false
+        },
+        {
+          "i": 1,
+          "text": "手动抽卡",
+          "disabled": false
+        },
+        {
+          "i": 2,
+          "text": "关镜",
+          "disabled": true
+        },
+        {
+          "i": 3,
+          "text": "手动抽卡",
+          "disabled": false
+        },
+        {
+          "i": 4,
+          "text": "",
+          "disabled": false
+        },
+        {
+          "i": 5,
+          "text": "正视 2 秒",
+          "disabled": false
+        },
+        {
+          "i": 6,
+          "text": "眨眼",
+          "disabled": false
+        },
+        {
+          "i": 7,
+          "text": "微笑",
+          "disabled": false
+        },
+        {
+          "i": 8,
+          "text": "抬眉",
+          "disabled": false
+        },
+        {
+          "i": 9,
+          "text": "张口",
+          "disabled": false
+        },
+        {
+          "i": 10,
+          "text": "左右回顾",
+          "disabled": false
+        },
+        {
+          "i": 11,
+          "text": "闭眼 1 秒",
+          "disabled": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 30,
+    "failed": 5,
+    "total": 35
+  },
+  "initialButtons": [
+    {
+      "i": 0,
+      "text": "开镜体验",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 1,
+      "text": "手动抽卡",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 2,
+      "text": "关镜",
+      "disabled": true,
+      "title": "关闭摄像头并提供手动抽卡"
+    },
+    {
+      "i": 3,
+      "text": "手动抽卡",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 4,
+      "text": "",
+      "disabled": false,
+      "title": "退出并清理本次会话"
+    },
+    {
+      "i": 5,
+      "text": "正视 2 秒",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 6,
+      "text": "眨眼",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 7,
+      "text": "微笑",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 8,
+      "text": "抬眉",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 9,
+      "text": "张口",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 10,
+      "text": "左右回顾",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 11,
+      "text": "闭眼 1 秒",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 12,
+      "text": "正视 2 秒",
+      "disabled": true,
+      "title": "调试触发 正视 2 秒"
+    },
+    {
+      "i": 13,
+      "text": "眨眼",
+      "disabled": true,
+      "title": "调试触发 眨眼"
+    },
+    {
+      "i": 14,
+      "text": "微笑",
+      "disabled": true,
+      "title": "调试触发 微笑"
+    },
+    {
+      "i": 15,
+      "text": "抬眉",
+      "disabled": true,
+      "title": "调试触发 抬眉"
+    },
+    {
+      "i": 16,
+      "text": "张口",
+      "disabled": true,
+      "title": "调试触发 张口"
+    },
+    {
+      "i": 17,
+      "text": "左右回顾",
+      "disabled": true,
+      "title": "调试触发 左右回顾"
+    },
+    {
+      "i": 18,
+      "text": "闭眼 1 秒",
+      "disabled": true,
+      "title": "调试触发 闭眼 1 秒"
+    },
+    {
+      "i": 19,
+      "text": "前程镜",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 20,
+      "text": "山河镜",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 21,
+      "text": "反馈入口",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 22,
+      "text": "问题上报",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 23,
+      "text": "product",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 24,
+      "text": "content",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 25,
+      "text": "compliance",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 26,
+      "text": "legal",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 27,
+      "text": "operations",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 28,
+      "text": "engineering",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 29,
+      "text": "viewer",
+      "disabled": false,
+      "title": ""
+    },
+    {
+      "i": 30,
+      "text": "Block card",
+      "disabled": false,
+      "title": "Block the first active campaign card in the local admin config"
+    },
+    {
+      "i": 31,
+      "text": "Unblock",
+      "disabled": true,
+      "title": "Unblock the newest locally blocked card"
+    }
+  ],
+  "consentBefore": {
+    "active": "consent",
+    "checkbox": false,
+    "startDisabled": true,
+    "body": "PHASE 15 COMMERCIAL EXPANSION\n\n观相镜\n端侧处理\n摄像头只用于本次端侧互动\n\n浏览器会请求摄像头权限。人脸关键点和表情动作仅在你的设备上处理，不上传原始图像、视频或身份标识。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。摄像头仅用于本次端侧动作互动，不上传、不保存原始图像或视频。\n\n我已知晓这是传统文化娱乐互动，可随时改用手动抽卡。\n同意并开镜\n不开镜\nentry\nconsent\ncalibration\naction_task\nresult\nexit\n关镜\n手动抽卡\n结果页等待卡牌\n\n完成动作或手动抽卡后，这里会显示安全标题、出处、现代释义、行动建议和免责声明。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。请把结果当作一张国风互动卡牌和今日行动提醒。\n\n动作任务\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n视觉状态\n会话\nconsent\n摄像头\nidle\n模型\nidle\n质量\n未检测到人脸\nFPS\n0\n帧耗时\n0ms\n质量分\n0\nYaw\n0\n最近事件\n\n暂无动作事件。\n\n多主题活动\n前程镜\n山河镜\n\n本体验默认不上传原始图片、视频或人脸模板；你可以不开摄像头直接手动抽卡。\n\n隐私默认值\n摄像头帧：local_only\n原始图像上传：false\n身份识别：false\n埋点：anonymous_events_only\n灰度埋点草案\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。后续分享海报不得包含原始人脸图像，默认只展示卡牌与免责声明。\n\n暂无匿名事件。\n\n灰度批次\n批次\nGRAY-001\n版本\nphase5-gray"
+  },
+  "consentAfter": {
+    "checkbox": true,
+    "startDisabled": false
+  },
+  "manualResult": {
+    "active": "result",
+    "body": "PHASE 15 COMMERCIAL EXPANSION\n\n观相镜\n端侧处理\nentry\nconsent\ncalibration\naction_task\nresult\nexit\n关镜\n手动抽卡\n\nCARD-KB-030\n\n收束意象3卡\n手动抽卡\n更古籍\n更轻松\n行动建议\n\n本次镜面抽到收束意象3。这是一条传统文化意象卡，适合用来整理当下节奏。\n\n出处\n神相全编\n现代释义\n用面部上中下三段的古籍意象转译为节奏管理提醒；本条用于第1阶段知识库初稿 30。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。请把结果当作一张国风互动卡牌和今日行动提醒。\n\nPOSTER V0.1\n\n前程镜\n收束意象3卡\n\n选择一个能在二十五分钟内完成的动作。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。\n再抽一张\n退出清理\n动作任务\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n视觉状态\n会话\nresult\n摄像头\nidle\n模型\nidle\n质量\n未检测到人脸\nFPS\n0\n帧耗时\n0ms\n质量分\n0\nYaw\n0\n最近事件\n手动抽卡\n100%\n多主题活动\n前程镜\n山河镜\n\n本体验默认不上传原始图片、视频或人脸模板；你可以不开摄像头直接手动抽卡。\n\n隐私默认值\n摄像头帧：local_only\n原始图像上传：false\n身份识别：false\n埋点：anonymous_events_only\n灰度埋点草案\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。后续分享海报不得包含原始人脸图像，默认只展示卡牌与免责声明。\n\ncard_drawn\nmanual_draw\nmanual_mode_selected\nmanual_draw\n灰度批次\n批次\nGRAY-001\n版本\nphase5-gray-v0.1\n目标样本\n50\n候选卡牌\n315\nGo/No-Go\nhold\n覆盖面\n3\n反馈入口\n问题上报\n\n灰度数据只使用匿名事件和人工反馈表。\n\n灰度看板\n完成率\n75%\n手动完成\n100%\n动作成功\n75%\n结果到达\n75%\n分享意愿\n50%\n负面反馈\n0%\n发布活动\n活动\nCMP-001\n主题\n前程镜\n形态\nweb_h5\n状态\nready\n主题卡池\n180\n海报模板\nPOSTER-QIANCHENG-001\n\n毕业季/求职季传统文化互动卡牌，只提供目标拆解、表达沟通、节奏管理和复盘行动建议。\n\n发布看板\n活动数\n1\n可发布卡\n180\n海报\nready\n隐私\nready\n内容\nready\nGo/No-Go\ngo\nPhase 8 Admin v0.1\nproduct\ncontent\ncompliance\nlegal\noperations\nengineering\nviewer\nConfig\nCFG-001\nStatus\ndraft\nThemes\n2\nCampaigns\n2\nRelease gates\n4/4\nBlocklist\n0\nAudit logs\n1\nExport\n15981 bytes\nBlock card\nUnblock\nConfig store\nPrivacy pass: true\nGo/No-Go: go\nCompletion\n70%\nManual\n100%\nAction\n90%\nPoster\n35%\n\nPhase 15 中，商业扩展后台草稿不会直接影响公开 H5；只有 active tenant 的 commercial-approved published snapshot 会进入前台。\n\nPhase 9 SaaS v0.1\nTenant\n观相镜内部运营空间\nType\ninternal\nAccounts\n5\nPolicies\n7\nSnapshots\n2\nAudits\n4\nMigration\ntrue\nGo/No-Go\ngo\nPublished snapshot only\nPrivacy: true\nDraft hidden from H5\nSnapshot\nSNP-001\nConfig\nCFG-101\nCampaign\nCMP-001\nBlock",
+    "buttons": [
+      {
+        "i": 0,
+        "text": "关镜",
+        "disabled": true
+      },
+      {
+        "i": 1,
+        "text": "手动抽卡",
+        "disabled": false
+      },
+      {
+        "i": 2,
+        "text": "",
+        "disabled": false
+      },
+      {
+        "i": 3,
+        "text": "更古籍",
+        "disabled": false
+      },
+      {
+        "i": 4,
+        "text": "更轻松",
+        "disabled": false
+      },
+      {
+        "i": 5,
+        "text": "行动建议",
+        "disabled": false
+      },
+      {
+        "i": 6,
+        "text": "再抽一张",
+        "disabled": false
+      },
+      {
+        "i": 7,
+        "text": "退出清理",
+        "disabled": false
+      }
+    ]
+  },
+  "exitState": {
+    "active": "exit",
+    "body": "PHASE 15 COMMERCIAL EXPANSION\n\n观相镜\n端侧处理\n本次会话已清理\n\n摄像头轨道已停止，本地临时会话数据已清空。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。退出后会停止摄像头轨道并清理本地临时会话。\n\n重新开始\nentry\nconsent\ncalibration\naction_task\nresult\nexit\n关镜\n手动抽卡\n结果页等待卡牌\n\n完成动作或手动抽卡后，这里会显示安全标题、出处、现代释义、行动建议和免责声明。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。请把结果当作一张国风互动卡牌和今日行动提醒。\n\n动作任务\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n视觉状态\n会话\nexit\n摄像头\nidle\n模型\nidle\n质量\n未检测到人脸\nFPS\n0\n帧耗时\n0ms\n质量分\n0\nYaw\n0\n最近事件\n\n暂无动作事件。\n\n多主题活动\n前程镜\n山河镜\n\n本体验默认不上传原始图片、视频或人脸模板；你可以不开摄像头直接手动抽卡。\n\n隐私默认值\n摄像头帧：local_only\n原始图像上传：false\n身份识别：false\n埋点：anonymous_events_only\n灰度埋点草案\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。后续分享海报不得包含原始人脸图像，默认只展示卡牌与免责声明。\n\nsession_exited\nlocal\n灰度批次\n批次\nGRAY-001\n版本\nphase5-gray-v0.1\n目标样本\n50\n候选卡牌\n315\nGo/No-Go\nhold\n覆盖面\n3\n反馈入口\n问题上报\n\n灰度数据只使用匿名事件和人工反馈表。\n\n灰度看板\n完成率\n75%\n手动完成\n100%\n动作成功\n75%\n结果到达\n75%\n分享意愿\n50%\n负面反馈\n0%\n发布活动\n活动\nCMP-001\n主题\n前程镜\n形态\nweb_h5\n状态\nready\n主题卡池\n180\n海报模板\nPOSTER-QIANCHENG-001\n\n毕业季/求职季传统文化互动卡牌，只提供目标拆解、表达沟通、节奏管理和复盘行动建议。\n\n发布看板\n活动数\n1"
+  },
+  "camSmoke": {
+    "camera": "active",
+    "model": "loading",
+    "quality": "未检测到人脸",
+    "body": "PHASE 15 COMMERCIAL EXPANSION\n\n观相镜\n端侧处理\n已进入兜底模式\n\n视觉模型暂时不可用，可以切换到手动抽卡继续体验。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。当前环境不适合开镜时，可继续使用手动抽卡。\n\n手动抽卡\n重试开镜\nentry\nconsent\ncalibration\naction_task\nresult\nexit\n关镜\n手动抽卡\n结果页等待卡牌\n\n完成动作或手动抽卡后，这里会显示安全标题、出处、现代释义、行动建议和免责声明。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。请把结果当作一张国风互动卡牌和今日行动提醒。\n\n动作任务\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n视觉状态\n会话\nfallback\n摄像头\nactive\n模型\nloading\n质量\n未检测到人脸\nFPS\n0\n帧耗时\n0ms\n质量分\n0\nYaw\n0\n最近事件\n\n暂无动作事件。\n\n多主题活动\n前程镜\n山河镜\n\n本体验默认不上传原始图片、视频或人脸模板；你可以不开摄像头直接手动抽卡。\n\n隐私默认值\n摄像头帧：local_only\n原始图像上传：false\n身份识别：false\n埋点：anonymous_events_only\n灰度埋点草案\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。后续分享海报不得包含原始人脸图像，默认只展示卡牌与免责声明。\n\ncamera_consent_granted\nlocal\n灰度批次\n批次\nGRAY-001\n版本\nphase5-gray-v0.1\n目标样本\n50\n候选卡牌\n315\nGo/No-Go\nhold\n覆盖面\n3\n反馈入口\n问题上报\n\n灰度数据只使用匿名事件和人工反馈表。\n\n灰度看板\n完成率\n75%\n手动完成\n100%\n动作成功\n75%\n结果到达\n75%\n分享意愿\n50%\n负面反馈\n0%\n发布活动\n活动\nCMP-001\n主题\n前程镜\n形态\nweb_h5\n状态\nready\n主题卡池\n180\n海报模板\nPOSTER-QIANCHENG-001\n\n毕业季/求职季传统文化互动卡牌，只提供目标拆解、表达沟通、节奏管理和复盘行动建议。\n\n发布看板\n活动数\n1\n可发布卡\n180\n海报\nready\n隐私\nready\n内容\nready\nGo/No-Go\ngo\nPhase 8 Admin v0.1\nproduct\ncontent\ncompliance\nlegal\noperations\nengineering\nviewer\nConfig\nCFG-001\nStatus\ndraft\nThemes\n2\nCampaigns\n2\nRelease gates\n4/4\nBlocklist\n0\nAudit logs\n1\nExport\n15981 bytes\nBlock card\nUnblock\nConfig store\nPrivacy pass: true\nGo/No-Go: go\nCompletion\n70%\nManual\n100%\nAction\n90%\nPoster\n35%\n\nPhase 15 中，商业扩展后台草稿不会直接影响公开 H5；只有 active tenant 的 commercial-approved published snapshot 会进入前台。\n\nPhase 9 SaaS v0.1\nTenant\n观相镜内部运营空间\nType\ninternal\nAccounts\n5\nPolicies\n7\nSnapshots\n2\nAudits\n4\nMigration\ntrue\nGo/No-Go\ngo\nPub"
+  },
+  "mobile": {
+    "buttons": [
+      {
+        "i": 0,
+        "text": "开镜体验",
+        "disabled": false
+      },
+      {
+        "i": 1,
+        "text": "手动抽卡",
+        "disabled": false
+      },
+      {
+        "i": 2,
+        "text": "关镜",
+        "disabled": true
+      },
+      {
+        "i": 3,
+        "text": "手动抽卡",
+        "disabled": false
+      },
+      {
+        "i": 4,
+        "text": "",
+        "disabled": false
+      },
+      {
+        "i": 5,
+        "text": "正视 2 秒",
+        "disabled": false
+      },
+      {
+        "i": 6,
+        "text": "眨眼",
+        "disabled": false
+      },
+      {
+        "i": 7,
+        "text": "微笑",
+        "disabled": false
+      },
+      {
+        "i": 8,
+        "text": "抬眉",
+        "disabled": false
+      },
+      {
+        "i": 9,
+        "text": "张口",
+        "disabled": false
+      },
+      {
+        "i": 10,
+        "text": "左右回顾",
+        "disabled": false
+      },
+      {
+        "i": 11,
+        "text": "闭眼 1 秒",
+        "disabled": false
+      }
+    ],
+    "body": "PHASE 15 COMMERCIAL EXPANSION\n\n观相镜\n端侧处理\n90 秒完成一次前程镜抽卡\n\n当前活动：前程镜线上发布版。可使用摄像头端侧动作触发，也可以直接手动抽卡。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。你可以不开摄像头，直接使用手动抽卡。\n\n开镜体验\n手动抽卡\nentry\nconsent\ncalibration\naction_task\nresult\nexit\n关镜\n手动抽卡\n结果页等待卡牌\n\n完成动作或手动抽卡后，这里会显示安全标题、出处、现代释义、行动建议和免责声明。\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。请把结果当作一张国风互动卡牌和今日行动提醒。\n\n动作任务\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n正视 2 秒\n眨眼\n微笑\n抬眉\n张口\n左右回顾\n闭眼 1 秒\n视觉状态\n会话\nentry\n摄像头\nidle\n模型\nidle\n质量\n未检测到人脸\nFPS\n0\n帧耗时\n0ms\n质量分\n0\nYaw\n0\n最近事件\n\n暂无动作事件。\n\n多主题活动\n前程镜\n山河镜\n\n本体验默认不上传原始图片、视频或人脸模板；你可以不开摄像头直接手动抽卡。\n\n隐私默认值\n摄像头帧：local_only\n原始图像上传：false\n身份识别：false\n埋点：anonymous_events_only\n灰度埋点草案\n\n本体验为传统文化娱乐互动，不能作为性格、命运、健康、婚恋、职业、财务或任何重要事项的判断依据。后续分享海报不得包含原始人脸图像，默认只展示卡牌与免责声明。\n\n暂无匿名事件。\n\n灰度批次\n批次\nGRAY-001\n版本\nphase5-gray-v0.1\n目标样本\n50\n候选卡牌\n315\nGo/No-Go\nhold\n覆盖面\n3\n反馈入口\n问题上报\n\n灰度数据只使用匿名事件和人工反馈表。\n\n灰度看板\n完成率\n75%\n手动完成\n100%\n动作成功\n75%\n结果到达\n75%\n分享意愿\n50%\n负面反馈\n0%\n发布活动\n活动\nCMP-001\n主题\n前程镜\n形态\nweb_h5\n状态\nready\n主题卡池\n180\n海报模板\nPOSTER-QIANCHENG-001\n\n毕业季/求职季传统文化互动卡牌，只提供目标拆解、表达沟通、节奏管理和复盘行动建议"
+  },
+  "consoleMessages": [
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+    "warning: W0504 10:08:45.599000 1922656 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.",
+    "log: I0504 10:08:45.703000 1922656 gl_context.cc:386] GL version: 3.0 (OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium))), renderer: WebKit WebGL",
+    "warning: W0504 10:08:45.705000 1922656 gl_context.cc:1072] OpenGL error checking is disabled",
+    "log: Graph successfully started running.",
+    "error: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.",
+    "debug: [vite] connecting...",
+    "debug: [vite] connected.",
+    "info: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "screenshots": [
+    "output/playwright/final-01-initial.png",
+    "output/playwright/final-02-consent.png",
+    "output/playwright/final-03-manual-result.png",
+    "output/playwright/final-04-result-tones.png",
+    "output/playwright/final-05-exit.png",
+    "output/playwright/final-06-shanhe.png",
+    "output/playwright/final-07-admin.png",
+    "output/playwright/final-08-camera-smoke.png",
+    "output/playwright/final-09-mobile.png"
+  ]
+}
